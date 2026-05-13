@@ -1,6 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, Source_Sans_3, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  variable: "--f-display",
+  display: "swap"
+});
+
+const sourceSans3 = Source_Sans_3({
+    subsets: ["latin"],
+    variable: "--f-body",     // → var(--f-body)
+    display: "swap",
+  });
+
+  const jetbrainsMono = JetBrains_Mono({
+    subsets: ["latin"],
+    variable: "--f-mono",     // → var(--f-mono)
+    display: "swap",
+  });
+
+const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
+
+const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", archivo.variable, sourceSans3.variable, jetbrainsMono.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

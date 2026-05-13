@@ -1,0 +1,248 @@
+/* Autaventura — site styles */
+
+:root {
+  --bg:        #f3ede2;
+  --bg-2:      #ebe3d3;
+  --bg-3:      #e3d9c4;
+  --paper:     #fbf7ef;
+  --ink:       #23211e;
+  --ink-2:     #4a4640;
+  --ink-3:     #807a70;
+  --ink-4:     #b8b0a2;
+  --line:      #d8cfbe;
+  --line-2:    #cdc2ae;
+  --terra:     #c2553a;
+  --terra-dk:  #a3432d;
+  --terra-tn:  #f0d8cf;
+  --sage:      #7a8870;
+  --sage-tn:   #d6dccc;
+  --gold:      #c8a04a;
+  --ok:        #5b8a55;
+
+  --wa:        #25d366;
+  --wa-dk:     #128c7e;
+
+  --f-display: 'Archivo', system-ui, sans-serif;
+  --f-body:    'Source Sans 3', system-ui, sans-serif;
+  --f-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  --shadow-1:  0 1px 2px rgba(35,33,30,.06), 0 4px 16px rgba(35,33,30,.04);
+  --shadow-2:  0 2px 6px rgba(35,33,30,.08), 0 18px 40px rgba(35,33,30,.08);
+}
+
+* { box-sizing: border-box; }
+
+.av { /* root frame */
+  font-family: var(--f-body);
+  color: var(--ink);
+  background: var(--bg);
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.av *::selection { background: var(--terra); color: #fff; }
+.av h1,.av h2,.av h3,.av h4,.av h5 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.av p { margin: 0; }
+.av button { font-family: inherit; font-size: inherit; cursor: pointer; border: 0; background: none; color: inherit; padding: 0; }
+.av a { color: inherit; text-decoration: none; }
+.av img { display: block; max-width: 100%; }
+
+/* — STRIPE PLACEHOLDER — */
+.stripe {
+  position: relative;
+  background:
+    repeating-linear-gradient(135deg,
+      #e8dec9 0 14px,
+      #ddd1b7 14px 28px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stripe.dark {
+  background:
+    repeating-linear-gradient(135deg,
+      #3a342c 0 14px,
+      #2c2722 14px 28px);
+  color: #d8cfbe;
+}
+.stripe.terra {
+  background:
+    repeating-linear-gradient(135deg,
+      #d27258 0 14px,
+      #c2553a 14px 28px);
+  color: #fff7ef;
+}
+.stripe.sage {
+  background:
+    repeating-linear-gradient(135deg,
+      #8b9882 0 14px,
+      #7a8870 14px 28px);
+  color: #f5f4ec;
+}
+.stripe .label {
+  position: relative;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #4a4640;
+  background: rgba(243,237,226,0.88);
+  padding: 6px 10px;
+  border-radius: 2px;
+  text-transform: lowercase;
+  text-align: center;
+  max-width: 80%;
+}
+.stripe.dark .label { color: #ebe3d3; background: rgba(35,33,30,0.7); }
+.stripe.terra .label { color: #fff; background: rgba(35,33,30,0.45); }
+.stripe.sage .label  { color: #fff; background: rgba(35,33,30,0.4); }
+
+/* — BUTTONS — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; font-family: var(--f-display); font-weight: 600; font-size: 15px;
+  padding: 14px 22px; border-radius: 999px;
+  letter-spacing: -0.005em; transition: transform .12s ease, background .15s, color .15s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary   { background: var(--terra); color: #fff7ef; }
+.btn-primary:hover { background: var(--terra-dk); }
+.btn-dark      { background: var(--ink); color: #fff7ef; }
+.btn-dark:hover { background: #000; }
+.btn-ghost     { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
+.btn-paper     { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+.btn-paper:hover { background: #fff; }
+.btn-wa        { background: var(--wa); color: #fff; }
+.btn-wa:hover  { background: var(--wa-dk); }
+.btn-sm { padding: 10px 16px; font-size: 13px; }
+.btn-lg { padding: 18px 28px; font-size: 17px; }
+
+/* — TAGS / CHIPS — */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--f-display); font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 4px 8px; border-radius: 2px;
+}
+.tag-line { background: transparent; border: 1px solid var(--line-2); color: var(--ink-2); }
+.tag-terra { background: var(--terra-tn); color: var(--terra-dk); }
+.tag-sage  { background: var(--sage-tn); color: #43523c; }
+.tag-ink   { background: var(--ink); color: var(--paper); }
+
+.eyebrow {
+  font-family: var(--f-display);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--terra);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.eyebrow::before {
+  content: ""; width: 24px; height: 1.5px; background: currentColor;
+}
+
+/* — UTILITY — */
+.divider { height: 1px; background: var(--line); }
+
+/* — FAQ — */
+.faq-item { border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  width: 100%; padding: 24px 0; text-align: left;
+  font-family: var(--f-display); font-weight: 500; font-size: 18px;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.faq-q .plus {
+  width: 24px; height: 24px; border: 1px solid var(--line-2); border-radius: 50%;
+  position: relative; flex-shrink: 0; transition: transform .25s, background .15s, border-color .15s;
+}
+.faq-q .plus::before, .faq-q .plus::after {
+  content: ""; position: absolute; background: var(--ink);
+  left: 50%; top: 50%;
+}
+.faq-q .plus::before { width: 10px; height: 1.5px; transform: translate(-50%, -50%); }
+.faq-q .plus::after  { width: 1.5px; height: 10px; transform: translate(-50%, -50%); transition: transform .25s; }
+.faq-item.open .faq-q .plus { background: var(--ink); border-color: var(--ink); }
+.faq-item.open .faq-q .plus::before { background: var(--paper); }
+.faq-item.open .faq-q .plus::after  { background: var(--paper); transform: translate(-50%, -50%) rotate(90deg); }
+.faq-a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .35s ease, padding .25s ease, opacity .25s ease;
+  opacity: 0;
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+.faq-item.open .faq-a {
+  max-height: 600px;
+  padding: 0 0 24px;
+  opacity: 1;
+}
+
+/* — DATE PICKER — */
+.dp {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.dp-month-title {
+  font-family: var(--f-display); font-weight: 500; font-size: 14px;
+  letter-spacing: 0.02em; text-transform: capitalize;
+  margin-bottom: 10px; color: var(--ink);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.dp-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.dp-dow {
+  font-family: var(--f-mono); font-size: 10px;
+  text-transform: uppercase; color: var(--ink-3);
+  text-align: center; padding: 4px 0;
+}
+.dp-d {
+  aspect-ratio: 1; font-size: 13px; font-family: var(--f-body);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; color: var(--ink); cursor: pointer;
+  transition: background .12s, color .12s;
+  position: relative;
+}
+.dp-d.muted { color: var(--ink-4); cursor: default; }
+.dp-d.in:hover { background: var(--bg-2); }
+.dp-d.range { background: var(--terra-tn); border-radius: 0; color: var(--terra-dk); }
+.dp-d.start { background: var(--terra); color: #fff; border-radius: 50% 0 0 50%; font-weight: 600; }
+.dp-d.end   { background: var(--terra); color: #fff; border-radius: 0 50% 50% 0; font-weight: 600; }
+.dp-d.single { border-radius: 50%; }
+.dp-nav {
+  width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: var(--ink-2);
+}
+.dp-nav:hover { background: var(--bg-2); }
+
+/* — VEHICLE CARD shared — */
+.veh-card { background: var(--paper); border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-1); transition: box-shadow .2s, transform .2s; }
+.veh-card:hover { box-shadow: var(--shadow-2); }
+
+/* — SCROLLBAR for inner artboards — */
+.av::-webkit-scrollbar { width: 0; height: 0; }
+.av { scrollbar-width: none; }
+
+/* — animated reveal — */
+@keyframes av-slide-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
