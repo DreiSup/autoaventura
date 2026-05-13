@@ -1,7 +1,7 @@
 export type Lang = 'es' | 'en'
 export type VanId = 'costa' | 'sierra' | 'valle' | 'mar'
 export type VanColor = 'terra' | 'sage' | 'ink'
-export type LicenseType = 'B1' | 'C1'
+export type LicenseType = 'B' | 'C1'
 export type KitchenType = 'full' | 'compact' | 'premium' | 'else'
 export type StripeKind = '' | 'dark' | 'terra' | 'sage'
 
