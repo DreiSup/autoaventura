@@ -1,4 +1,4 @@
-export type DemandLevel = 'low' | 'mid' | 'high' | 'especial';
+/* export type DemandLevel = 'low' | 'mid' | 'high' | 'especial';
 
 export interface DemandRange {
   from: string; // 'MM-DD'
@@ -22,4 +22,4 @@ export function getDemandLevel(date: Date): DemandLevel {
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day   = String(date.getDate()).padStart(2, '0');
     const md    = `${month}-${day}`;
-}
+} */
