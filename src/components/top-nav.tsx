@@ -18,7 +18,7 @@ const LINKS: { href: string; label: string; section: NavSection }[] = [
 export function TopNav({ active = 'home' }: TopNavProps) {
   return (
     <nav className="sticky top-0 z-20 bg-bg flex items-center justify-between py-5 px-16">
-      <Link href="/" aria-label="Autaventura — inicio">
+      <Link href="/" aria-label="Autoaventura — inicio">
         <Logo size={20} />
       </Link>
 

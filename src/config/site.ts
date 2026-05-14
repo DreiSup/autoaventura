@@ -1,8 +1,8 @@
 export const SITE = {
-  name:      'Autaventura',
-  legalName: 'Autaventura Valencia S.L.',
+  name:      'Autoaventura',
+  legalName: 'Autoaventura Valencia S.L.',
   nif:       'B-12345678',
-  email:     'hola@autaventura.es',
+  email:     'hola@autoaventura.es',
   phone:     '+34 962 12 34 56',
   whatsapp:  '+34962123456',
   founding:  2019,

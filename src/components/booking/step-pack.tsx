@@ -172,13 +172,13 @@ export function StepPack({ pack, setPack }: StepPackProps) {
         </div>
       )}
 
-      {/* Autaventura Pass banner */}
+      {/* Autoaventura Pass banner */}
       <div className="mt-6 bg-sage-tn rounded-md px-5 py-4 flex items-center gap-3.5">
         <div className="w-9 h-9 rounded-full bg-sage text-paper shrink-0 flex items-center justify-center font-display font-bold text-sm tracking-[-0.02em]">
           A+
         </div>
         <div className="flex-1 min-w-0">
-          <div className="font-display font-semibold text-sm text-[#3b4a35]">Autaventura Pass</div>
+          <div className="font-display font-semibold text-sm text-[#3b4a35]">Autoaventura Pass</div>
           <div className="text-[13px] text-[#4d5d44] leading-[1.45] mt-0.5">
             ¿Viajas más de 3 veces al año? Tarifa reducida y <em>Sin Preocupaciones</em> siempre incluido.{' '}
             <a href="#" className="underline underline-offset-[3px] font-semibold">Saber más →</a>

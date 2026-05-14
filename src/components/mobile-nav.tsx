@@ -17,7 +17,7 @@ export function MobileNav() {
   return (
     <>
       <nav className="sticky top-0 z-30 bg-bg flex items-center justify-between py-4 px-5 border-b border-line">
-        <Link href="/" aria-label="Autaventura — inicio" onClick={() => setOpen(false)}>
+        <Link href="/" aria-label="Autoaventura — inicio" onClick={() => setOpen(false)}>
           <Logo size={17} />
         </Link>
 

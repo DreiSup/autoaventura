@@ -1,4 +1,4 @@
-// booking.jsx — Onboarding / booking flow for Autaventura
+// booking.jsx — Onboarding / booking flow for Autoaventura
 // Four steps: Vehículo → Fechas → Pack → Resumen
 // Renders each step on its own artboard so the whole flow is visible side-by-side.
 
@@ -531,7 +531,7 @@ function StepPack({ pack, setPack }) {
         }}>A+</div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontFamily: 'var(--f-display)', fontWeight: 600, fontSize: 14, color: '#3b4a35' }}>
-            Autaventura Pass
+            Autoaventura Pass
           </div>
           <div style={{ fontSize: 13, color: '#4d5d44', lineHeight: 1.45, marginTop: 2 }}>
             ¿Viajas más de 3 veces al año? Tarifa reducida y <em>Sin Preocupaciones</em> siempre incluido. <a style={{ textDecoration: 'underline', textUnderlineOffset: 3, fontWeight: 600 }}>Saber más →</a>

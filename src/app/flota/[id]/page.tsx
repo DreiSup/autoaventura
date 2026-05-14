@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const van = getVan(id as VanId)
   if (!van) return {}
   return {
-    title:       `${van.name} — desde ${van.price.low}€/día · Autaventura`,
+    title:       `${van.name} — desde ${van.price.low}€/día · Autoaventura`,
     description: van.descr_es,
   }
 }

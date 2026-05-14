@@ -18,7 +18,7 @@ export function Logo({ size = 20, color = 'var(--ink)', className }: LogoProps) 
       >
         <span className="absolute inset-[22%] rounded-full bg-bg" />
       </span>
-      autaventura
+      autoaventura
     </div>
   )
 }

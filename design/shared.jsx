@@ -1,4 +1,4 @@
-// shared.jsx — i18n, primitives, data, shared components for Autaventura
+// shared.jsx — i18n, primitives, data, shared components for Autoaventura
 
 /* ─────────── i18n ─────────── */
 const DICT = {
@@ -95,8 +95,8 @@ const DICT = {
       privacidad: 'Política de Privacidad',
       cookies: 'Política de Cookies',
       terminos: 'Términos del alquiler',
-      nif: 'NIF B-12345678 · Autaventura Valencia S.L.',
-      rights: '© 2026 Autaventura · Hecho con cariño en Valencia',
+      nif: 'NIF B-12345678 · Autoaventura Valencia S.L.',
+      rights: '© 2026 Autoaventura · Hecho con cariño en Valencia',
     },
     wa: {
       online: 'En línea',
@@ -274,8 +274,8 @@ const DICT = {
       privacidad: 'Privacy Policy',
       cookies: 'Cookie Policy',
       terminos: 'Rental terms',
-      nif: 'NIF B-12345678 · Autaventura Valencia S.L.',
-      rights: '© 2026 Autaventura · Made with care in Valencia',
+      nif: 'NIF B-12345678 · Autoaventura Valencia S.L.',
+      rights: '© 2026 Autoaventura · Made with care in Valencia',
     },
     wa: {
       online: 'Online',
@@ -547,7 +547,7 @@ function Logo({ size = 18, color = 'var(--ink)' }) {
           background: 'var(--bg)',
         }} />
       </span>
-      <span style={{ fontSize: size, fontWeight: 700, letterSpacing: '-0.02em' }}>autaventura</span>
+      <span style={{ fontSize: size, fontWeight: 700, letterSpacing: '-0.02em' }}>autoaventura</span>
     </div>
   );
 }
@@ -749,7 +749,7 @@ function WhatsAppFAB({ contained = true }) {
           <div style={{ background: 'var(--wa-dk)', color: '#fff', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#a3d2bc', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--f-display)', fontWeight: 700, color: 'var(--wa-dk)' }}>M</div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontFamily: 'var(--f-display)', fontWeight: 600, fontSize: 14 }}>Marta · Autaventura</div>
+              <div style={{ fontFamily: 'var(--f-display)', fontWeight: 600, fontSize: 14 }}>Marta · Autoaventura</div>
               <div style={{ fontSize: 11, opacity: 0.85 }}>{typing ? t.wa.typing : t.wa.online}</div>
             </div>
             <button onClick={() => setOpen(false)} style={{ width: 28, height: 28, borderRadius: '50%', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>×</button>
@@ -841,7 +841,7 @@ function Footer({ compact }) {
           <h5 style={{ fontFamily: 'var(--f-display)', fontSize: 13, fontWeight: 600, color: 'var(--paper)', marginBottom: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{t.footer.contact}</h5>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             <li>+34 962 12 34 56</li>
-            <li>hola@autaventura.es</li>
+            <li>hola@autoaventura.es</li>
             <li>Carrer del Forn, 24</li>
             <li>46470 Catarroja</li>
           </ul>
@@ -949,7 +949,7 @@ function MapBlock({ compact, height = 360 }) {
           background: 'var(--paper)', padding: '8px 12px', borderRadius: 4, fontFamily: 'var(--f-display)', fontWeight: 600, fontSize: 13,
           color: 'var(--ink)', boxShadow: '0 6px 14px rgba(0,0,0,.15)', whiteSpace: 'nowrap',
         }}>
-          autaventura
+          autoaventura
           <span style={{ display: 'block', fontFamily: 'var(--f-mono)', fontWeight: 400, fontSize: 10, color: 'var(--ink-2)' }}>Carrer del Forn 24</span>
         </div>
         <svg width="22" height="30" viewBox="0 0 22 30">
