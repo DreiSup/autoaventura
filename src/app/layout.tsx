@@ -3,6 +3,8 @@ import { Archivo, Source_Sans_3, JetBrains_Mono } from 'next/font/google'
 import { getSiteConfig } from '@/lib/data'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: 'Alquiler de autocaravanas en Valencia. Todo incluido, sin sorpresas. Recogida en Catarroja.',
-  metadataBase: new URL('https://autoaventura.es'),
+  metadataBase: new URL('https://portquestudiar.com'),
   openGraph: {
     siteName: site.name,
     locale: 'es_ES',
@@ -46,6 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="bg-bg text-ink font-sans antialiased min-h-screen">
         {children}
+        <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   )
