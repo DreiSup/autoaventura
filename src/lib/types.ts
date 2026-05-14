@@ -14,8 +14,11 @@ export interface VanBase {
 
 export interface VanPrice {
     low:  number
+    especial: number
     mid:  number
     high: number
+    extra: number
+    bond: number
 }
 
 export interface PriceTier {
@@ -27,6 +30,7 @@ export interface PriceTier {
 
 export interface Van {
     id:              VanId
+    model:           string        // 'Roller Team 2024 Kronos Advance 284 TL'
     name:            string
     tagline_es:      string
     tagline_en:      string
@@ -50,6 +54,13 @@ export interface Van {
     price:           VanPrice
     tiers:           PriceTier[]
     color:           VanColor
+    mma?:            number
+    widthXlength?:   string
+    motor?:          string
+    deposit?:        number
+    cleanWater?:     number
+    grayWater?:      number
+
   }
 
 
@@ -66,4 +77,20 @@ export interface FaqItem {
 export interface GalleryShot {
     kind:  StripeKind
     label: string
+}
+
+export type PackId = 'aventurero' | 'sinpreo'
+
+export interface PackBullet {
+  ok:   boolean
+  text: string
+}
+
+export interface Pack {
+  id:         PackId
+  name:       string
+  sub:        string
+  addPerDay:  number
+  tagline:    string
+  bullets:    PackBullet[]
 }

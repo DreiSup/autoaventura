@@ -177,3 +177,23 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .eyebrow {
+    font-family: var(--f-display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terra);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background: currentColor;
+  }
+}

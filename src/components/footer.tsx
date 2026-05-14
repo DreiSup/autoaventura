@@ -6,12 +6,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
   const site = getSiteConfig()
 
   return (
-    <footer className="bg-ink text-bg-3 text-sm" style={{ padding: compact ? '40px 20px 24px' : '64px 64px 32px' }}>
-      <div
-        className="grid gap-8 mb-12"
-        style={{ gridTemplateColumns: compact ? '1fr' : '1.5fr 1fr 1fr 1fr' }}
-      >
-        <div>
+    <footer className={compact ? 'bg-ink text-bg-3 text-sm px-5 pt-10 pb-6' : 'bg-ink text-bg-3 text-sm px-5 pt-14 pb-8 md:px-16 md:pt-16'}>
+      <div className={compact ? 'grid grid-cols-1 gap-8 mb-10' : 'grid grid-cols-2 gap-8 mb-10 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:gap-8 md:mb-12'}>
+        <div className="col-span-2 md:col-span-1">
           <Logo size={20} color="var(--paper)" />
           <p className="mt-4 max-w-[280px] text-ink-4 leading-relaxed">
             Autocaravanas honestas. Desde Valencia, para toda España y Europa.
@@ -40,7 +37,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         </FooterCol>
       </div>
 
-      <div className="border-t border-white/10 pt-6 flex flex-wrap justify-between gap-4 text-ink-4 text-xs">
+      <div className="border-t border-white/10 pt-6 flex flex-col gap-1.5 md:flex-row md:justify-between md:gap-4 text-ink-4 text-xs">
         <span>NIF {site.nif} · {site.legalName}</span>
         <span>© {new Date().getFullYear()} {site.name} · Hecho con cariño en Valencia</span>
       </div>

@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="relative grid md:grid-cols-[1.4fr_1fr] md:gap-20 md:items-center">
           <div className="mb-8 md:mb-0">
             <Eyebrow className="mb-5 text-terra">Hablemos</Eyebrow>
-            <h2 className="font-display font-semibold tracking-tight leading-[1.0] text-[38px] text-paper mb-4 md:text-[72px]">
+            <h2 className="font-display font-semibold tracking-tight leading-[1.0] text-[30px] text-paper mb-4 md:text-[72px]">
               ¿Listo para coger la carretera?
             </h2>
             <p className="text-ink-4 leading-relaxed max-w-[520px] md:text-lg">
@@ -179,11 +179,11 @@ export default function HomePage() {
 
 function TrustItem({ big, sub, extra }: { big: React.ReactNode; sub: string; extra: string }) {
   return (
-    <div className="px-4 border-l border-line flex flex-col gap-1 md:px-7">
-      <div className="font-display text-[28px] font-semibold text-ink tracking-tight leading-none flex items-center gap-1.5 md:text-[52px]">
+    <div className="px-4 border-l border-line flex flex-col gap-0.5 md:px-7">
+      <div className="font-display text-[24px] font-semibold text-ink tracking-tight leading-none flex items-center gap-1.5 md:text-[52px]">
         {big}
       </div>
-      <div className="font-display font-medium text-xs text-ink mt-2 md:text-[13px]">{sub}</div>
+      <div className="font-display font-medium text-xs text-ink mt-1.5 md:text-[13px]">{sub}</div>
       <div className="text-[11px] text-ink-3">{extra}</div>
     </div>
   )
