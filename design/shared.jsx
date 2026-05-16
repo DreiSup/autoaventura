@@ -6,7 +6,7 @@ const DICT = {
     nav: { fleet: 'Flota', how: 'Cómo funciona', faq: 'Preguntas', contact: 'Contacto', book: 'Reservar' },
     hero: {
       h1a: 'Autocaravanas',
-      h1b: 'desde Valencia',
+      h1b: 'desde Barcelona',
       h1c: 'para 4 personas',
       sub: 'Todo incluido. Sin sorpresas, sin letra pequeña.',
       pickup: 'Recogida',
@@ -17,12 +17,12 @@ const DICT = {
       search: 'Ver disponibilidad',
       from: 'desde',
       to: 'hasta',
-      catarroja: 'Catarroja · Valencia',
+      santvicençdelshorts: 'Sant Vicenç dels Horts · Barcelona',
     },
     trust: {
       reviews: 'reseñas en Google',
       rating: 'sobre 5',
-      years: 'años en Valencia',
+      years: 'años en Barcelona',
       yearsSub: 'desde 2019',
       rentals: 'viajes completados',
       rentalsSub: 'y los que vendrán',
@@ -56,7 +56,7 @@ const DICT = {
       step2t: 'Confirma por WhatsApp',
       step2d: 'Te respondemos en menos de 2 horas. Resolvemos dudas y bloqueamos las fechas.',
       step3n: '03',
-      step3t: 'Recoge en Catarroja',
+      step3t: 'Recoge en Sant Vicenç dels Horts',
       step3d: 'Te enseñamos la furgo en 30 minutos. Lleno de gasoil. Y a viajar.',
     },
     faq: {
@@ -68,7 +68,7 @@ const DICT = {
     cta: {
       eyebrow: 'Hablemos',
       title: '¿Listo para coger la carretera?',
-      sub: 'WhatsApp es la forma más rápida. Nuestro equipo (humano, en Valencia) responde en menos de 2 horas en horario laboral.',
+      sub: 'WhatsApp es la forma más rápida. Nuestro equipo (humano, en Barcelona) responde en menos de 2 horas en horario laboral.',
       wa: 'Escribir por WhatsApp',
       waSub: 'Respuesta < 2 h',
       call: 'Llamar al 962 12 34 56',
@@ -77,9 +77,9 @@ const DICT = {
     map: {
       eyebrow: 'Dónde estamos',
       title: 'Nos ves desde la A-7.',
-      sub: 'Recogida y entrega en nuestro local de Catarroja, a 10 minutos del centro de Valencia y de la playa de El Saler.',
+      sub: 'Recogida y entrega en nuestro local de Sant Vicenç dels Horts, a 10 minutos del centro de Barcelona y de la playa de El Saler.',
       addr: 'Carrer del Forn, 24',
-      city: '46470 Catarroja, Valencia',
+      city: '46470 Sant Vicenç dels Horts, Barcelona',
       hours1: 'Lun–Vie · 9:00–13:00, 16:00–19:00',
       hours2: 'Sábados · 9:00–13:00',
       hours3: 'Domingos · cerrado (recogidas concertadas)',
@@ -87,7 +87,7 @@ const DICT = {
       parking: 'Parking gratuito para tu coche durante el viaje',
     },
     footer: {
-      tag: 'Autocaravanas honestas. Desde Valencia, para toda España y Europa.',
+      tag: 'Autocaravanas honestas. Desde Barcelona, para toda España y Europa.',
       explore: 'Explorar',
       legal: 'Legal',
       contact: 'Contacto',
@@ -95,8 +95,8 @@ const DICT = {
       privacidad: 'Política de Privacidad',
       cookies: 'Política de Cookies',
       terminos: 'Términos del alquiler',
-      nif: 'NIF B-12345678 · Autoaventura Valencia S.L.',
-      rights: '© 2026 Autoaventura · Hecho con cariño en Valencia',
+      nif: 'NIF B-12345678 · Autoaventura Barcelona S.L.',
+      rights: '© 2026 Autoaventura · Hecho con cariño en Barcelona',
     },
     wa: {
       online: 'En línea',
@@ -185,7 +185,7 @@ const DICT = {
     nav: { fleet: 'Fleet', how: 'How it works', faq: 'FAQ', contact: 'Contact', book: 'Book' },
     hero: {
       h1a: 'Campervans',
-      h1b: 'from Valencia',
+      h1b: 'from Barcelona',
       h1c: 'for four',
       sub: 'Everything included. No surprises, no fine print.',
       pickup: 'Pick-up',
@@ -196,12 +196,12 @@ const DICT = {
       search: 'Check availability',
       from: 'from',
       to: 'to',
-      catarroja: 'Catarroja · Valencia',
+      santvicençdelshorts: 'Sant Vicenç dels Horts · Barcelona',
     },
     trust: {
       reviews: 'Google reviews',
       rating: 'out of 5',
-      years: 'years in Valencia',
+      years: 'years in Barcelona',
       yearsSub: 'since 2019',
       rentals: 'trips completed',
       rentalsSub: 'and counting',
@@ -235,7 +235,7 @@ const DICT = {
       step2t: 'Confirm by WhatsApp',
       step2d: 'We reply in under 2 hours. We answer your questions and lock the dates.',
       step3n: '03',
-      step3t: 'Pick up in Catarroja',
+      step3t: 'Pick up in Sant Vicenç dels Horts',
       step3d: 'We show you the van in 30 minutes. Full tank. And off you go.',
     },
     faq: {
@@ -247,7 +247,7 @@ const DICT = {
     cta: {
       eyebrow: 'Let’s talk',
       title: 'Ready to hit the road?',
-      sub: 'WhatsApp is the fastest way. Our (human, Valencia-based) team replies in under 2 hours on workdays.',
+      sub: 'WhatsApp is the fastest way. Our (human, Barcelona-based) team replies in under 2 hours on workdays.',
       wa: 'Chat on WhatsApp',
       waSub: 'Reply < 2 h',
       call: 'Call +34 962 12 34 56',
@@ -256,9 +256,9 @@ const DICT = {
     map: {
       eyebrow: 'Where we are',
       title: 'You can see us from the A-7.',
-      sub: 'Pick-up and drop-off at our shop in Catarroja, 10 minutes from central Valencia and El Saler beach.',
+      sub: 'Pick-up and drop-off at our shop in Sant Vicenç dels Horts, 10 minutes from central Barcelona and El Saler beach.',
       addr: 'Carrer del Forn, 24',
-      city: '46470 Catarroja, Valencia',
+      city: '46470 Sant Vicenç dels Horts, Barcelona',
       hours1: 'Mon–Fri · 9:00–13:00, 16:00–19:00',
       hours2: 'Saturdays · 9:00–13:00',
       hours3: 'Sundays · closed (pre-arranged pick-ups)',
@@ -266,7 +266,7 @@ const DICT = {
       parking: 'Free parking for your car while you travel',
     },
     footer: {
-      tag: 'Honest campervans. From Valencia, across Spain and Europe.',
+      tag: 'Honest campervans. From Barcelona, across Spain and Europe.',
       explore: 'Explore',
       legal: 'Legal',
       contact: 'Contact',
@@ -274,8 +274,8 @@ const DICT = {
       privacidad: 'Privacy Policy',
       cookies: 'Cookie Policy',
       terminos: 'Rental terms',
-      nif: 'NIF B-12345678 · Autoaventura Valencia S.L.',
-      rights: '© 2026 Autoaventura · Made with care in Valencia',
+      nif: 'NIF B-12345678 · Autoaventura Barcelona S.L.',
+      rights: '© 2026 Autoaventura · Made with care in Barcelona',
     },
     wa: {
       online: 'Online',
@@ -840,10 +840,10 @@ function Footer({ compact }) {
         <div>
           <h5 style={{ fontFamily: 'var(--f-display)', fontSize: 13, fontWeight: 600, color: 'var(--paper)', marginBottom: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{t.footer.contact}</h5>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <li>+34 962 12 34 56</li>
-            <li>hola@autoaventura.es</li>
-            <li>Carrer del Forn, 24</li>
-            <li>46470 Catarroja</li>
+            <li>+34 609 856 049</li>
+            <li>info@autoaventuras.com</li>
+            <li>Carrer Santander 44-48,</li>
+            <li>08620 Sant Vicenç dels Horts</li>
           </ul>
         </div>
         <div>
@@ -935,9 +935,9 @@ function MapBlock({ compact, height = 360 }) {
         <path d="M120 360 L130 0" stroke="#fff" strokeWidth="2" />
         <path d="M450 360 L460 0" stroke="#fff" strokeWidth="2" />
         {/* labels */}
-        <text x="40" y="40" fontFamily="var(--f-mono)" fontSize="11" fill="#8b8470">CATARROJA</text>
-        <text x="560" y="40" fontFamily="var(--f-mono)" fontSize="11" fill="#8b8470">VALENCIA</text>
-        <text x="700" y="290" fontFamily="var(--f-mono)" fontSize="11" fill="#7a8870">L'ALBUFERA</text>
+        <text x="40" y="40" fontFamily="var(--f-mono)" fontSize="11" fill="#8b8470">SANT VICENÇ DELS HORTS</text>
+        <text x="560" y="40" fontFamily="var(--f-mono)" fontSize="11" fill="#8b8470">BARCELONA</text>
+        <text x="700" y="290" fontFamily="var(--f-mono)" fontSize="11" fill="#7a8870">BARCELONA</text>
       </svg>
       {/* pin */}
       <div style={{

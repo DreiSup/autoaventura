@@ -11,7 +11,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         <div className="col-span-2 md:col-span-1">
           <Logo size={20} color="var(--paper)" />
           <p className="mt-4 max-w-[280px] text-ink-4 leading-relaxed">
-            Autocaravanas honestas. Desde Valencia, para toda España y Europa.
+            Autocaravanas honestas. Desde Barcelona, para toda España y Europa.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
 
       <div className="border-t border-white/10 pt-6 flex flex-col gap-1.5 md:flex-row md:justify-between md:gap-4 text-ink-4 text-xs">
         <span>NIF {site.nif} · {site.legalName}</span>
-        <span>© {new Date().getFullYear()} {site.name} · Hecho con cariño en Valencia</span>
+        <span>© {new Date().getFullYear()} {site.name} · Hecho con cariño en Barcelona</span>
       </div>
     </footer>
   )

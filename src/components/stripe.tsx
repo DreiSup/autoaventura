@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import type { StripeKind } from '@/lib/types'
 
@@ -19,15 +20,20 @@ interface StripeProps {
   kind?: StripeKind
   label?: string
   className?: string
+  src?: string
+  alt?: string
 }
 
-export function Stripe({ kind = '', label, className }: StripeProps) {
+export function Stripe({ kind = '', label, className, src, alt }: StripeProps) {
   return (
     <div
       className={cn('relative flex items-center justify-center overflow-hidden', className)}
-      style={{ background: GRADIENTS[kind] }}
+      style={src ? undefined : { background: GRADIENTS[kind] }}
     >
-      {label && (
+      {src && (
+        <Image src={src} alt={alt ?? label ?? ''} fill className="object-cover" />
+      )}
+      {!src && label && (
         <span
           className={cn(
             'relative font-mono text-[11px] tracking-[0.04em] lowercase text-center px-2.5 py-1.5 rounded-sm max-w-[80%]',

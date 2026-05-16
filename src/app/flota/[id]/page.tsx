@@ -10,27 +10,6 @@ import { getVan, getVans } from '@/lib/data'
 import { INCLUDED, NOT_INCLUDED } from '@/config/offers'
 import type { Van, VanId, VanColor, StripeKind } from '@/lib/types'
 
-const GALLERY: Array<{ kind: StripeKind; label: string }> = [
-  { kind: '',      label: 'exterior · 3/4 front'   },
-  { kind: 'dark',  label: 'interior · noche'        },
-  { kind: 'terra', label: 'cama doble configurada'  },
-  { kind: 'sage',  label: 'cocina · plano abierto'  },
-  { kind: '',      label: 'baño · ducha'            },
-  { kind: 'dark',  label: 'asientos delanteros'     },
-  { kind: 'sage',  label: 'mesa exterior + toldo'   },
-  { kind: 'terra', label: 'garaje · bicis'          },
-  { kind: '',      label: 'detalle · puerta'        },
-  { kind: 'dark',  label: 'interior · día'          },
-  { kind: 'sage',  label: 'depósito agua'           },
-  { kind: '',      label: 'mando + salpicadero'     },
-  { kind: 'terra', label: 'amanecer · costa'        },
-  { kind: 'dark',  label: 'detalle iluminación'     },
-  { kind: 'sage',  label: 'almacenaje · bajo cama'  },
-  { kind: '',      label: 'ducha exterior'          },
-  { kind: 'terra', label: 'frigo + nevera'          },
-  { kind: 'dark',  label: 'cama elevable'           },
-]
-
 const colorToKind: Record<VanColor, StripeKind> = {
   terra: 'terra',
   sage:  'sage',
@@ -65,6 +44,7 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
   const vanIndex = allVans.findIndex(v => v.id === van.id) + 1
   const others   = allVans.filter(v => v.id !== van.id)
   const heroKind = colorToKind[van.color]
+  const images   = van.images ?? []
 
   return (
     <>
@@ -125,22 +105,26 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
 
         {/* Gallery — desktop: 5-slot grid */}
         <div className="hidden md:grid grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr] gap-1.5 h-[480px] mt-7 rounded overflow-hidden">
-          <Stripe kind={GALLERY[0].kind} label={GALLERY[0].label} className="row-span-2" />
-          <Stripe kind={GALLERY[1].kind} label={GALLERY[1].label} />
-          <Stripe kind={GALLERY[2].kind} label={GALLERY[2].label} />
-          <Stripe kind={GALLERY[3].kind} label={GALLERY[3].label} />
-          <div className="relative cursor-pointer group">
-            <Stripe kind={GALLERY[4].kind} label="" className="absolute inset-0" />
-            <div className="absolute inset-0 bg-ink/55 group-hover:bg-ink/65 transition-colors flex flex-col items-center justify-center">
-              <span className="font-display text-[22px] font-semibold text-paper leading-none">+{GALLERY.length - 5}</span>
-              <span className="font-mono text-[11px] text-paper/85 mt-1.5">ver galería</span>
+          <Stripe src={images[0]} kind={heroKind} label="exterior" className="row-span-2" />
+          <Stripe src={images[1]} kind="dark"  label="interior" />
+          <Stripe src={images[2]} kind="terra" label="detalle" />
+          <Stripe src={images[3]} kind="sage"  label="interior" />
+          {images.length > 5 ? (
+            <div className="relative cursor-pointer group">
+              <Stripe src={images[4]} kind="" label="" className="absolute inset-0" />
+              <div className="absolute inset-0 bg-ink/55 group-hover:bg-ink/65 transition-colors flex flex-col items-center justify-center">
+                <span className="font-display text-[22px] font-semibold text-paper leading-none">+{images.length - 5}</span>
+                <span className="font-mono text-[11px] text-paper/85 mt-1.5">ver galería</span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <Stripe src={images[4]} kind="" label="detalle" />
+          )}
         </div>
 
         {/* Gallery — mobile: hero */}
         <div className="relative mt-5 md:hidden h-[280px] rounded overflow-hidden">
-          <Stripe kind={heroKind} label={`${van.name.toLowerCase()} · hero`} className="absolute inset-0" />
+          <Stripe src={images[0]} kind={heroKind} label={`${van.name.toLowerCase()} · hero`} className="absolute inset-0" />
           <div className="absolute top-3 left-3 flex gap-1.5">
             <span className="bg-ink text-paper font-display text-[11px] font-semibold tracking-[0.1em] uppercase px-2 py-1 rounded-sm">
               {van.id.toUpperCase()}
@@ -152,7 +136,7 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
             )}
           </div>
           <div className="absolute right-3 bottom-3 bg-paper px-3 py-1.5 rounded font-mono text-[11px]">
-            1 / {GALLERY.length}
+            1 / {images.length || 1}
           </div>
         </div>
       </section>
@@ -336,7 +320,7 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
                     href={`/flota/${v.id}`}
                     className="group bg-paper rounded overflow-hidden shadow-card hover:shadow-float transition-shadow"
                   >
-                    <Stripe kind={colorToKind[v.color]} label={`${v.name.toLowerCase()} · thumbnail`} className="h-[130px]" />
+                    <Stripe src={v.images?.[0]} kind={colorToKind[v.color]} label={`${v.name.toLowerCase()} · thumbnail`} className="h-[130px]" />
                     <div className="px-4 py-3.5">
                       <div className="flex items-baseline justify-between mb-1">
                         <h3 className="font-display font-semibold text-[18px]">{v.name}</h3>
@@ -368,10 +352,10 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
               Nos ves desde la A-7.
             </h2>
             <p className="text-[15px] md:text-[16px] text-ink-2 mb-6 leading-relaxed">
-              Recogida y entrega en nuestro local de Catarroja, a 10 minutos del centro de Valencia y de la playa de El Saler.
+              Recogida y entrega en nuestro local de Sant Vicenç dels Horts, a 10 minutos del centro de Barcelona y de la playa de El Saler.
             </p>
             <div className="flex flex-col gap-2 mb-6 text-sm">
-              <div className="font-display font-semibold">Carrer del Forn, 24 · 46470 Catarroja, Valencia</div>
+              <div className="font-display font-semibold">Carrer del Forn, 24 · 46470 Sant Vicenç dels Horts, Barcelona</div>
               <div className="text-ink-2">Lun–Vie · 9:00–13:00, 16:00–19:00</div>
               <div className="text-ink-2">Sábados · 9:00–13:00</div>
             </div>
@@ -385,7 +369,7 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
             </a>
           </div>
           <div className="h-[220px] md:h-[400px] rounded overflow-hidden">
-            <Stripe kind="sage" label="mapa · Catarroja, Valencia" className="w-full h-full" />
+            <Stripe kind="sage" label="mapa · Sant Vicenç dels Horts, Barcelona" className="w-full h-full" />
           </div>
         </div>
       </section>

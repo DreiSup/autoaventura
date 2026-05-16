@@ -60,6 +60,7 @@ export interface Van {
     deposit?:        number
     cleanWater?:     number
     grayWater?:      number
+    images?:         string[]   // primer elemento = hero
 
   }
 

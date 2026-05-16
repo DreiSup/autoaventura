@@ -1,19 +1,19 @@
 export const SITE = {
   name:      'Autoaventura',
-  legalName: 'Autoaventura Valencia S.L.',
+  legalName: 'Autoaventura Barcelona S.L.',
   nif:       'B-12345678',
-  email:     'hola@autoaventura.es',
-  phone:     '+34 962 12 34 56',
-  whatsapp:  '+34962123456',
+  email:     'info@autoaventuras.com.',
+  phone:     '+34 609 856 049',
+  whatsapp:  '+34609856049',
   founding:  2019,
 
   address: {
     street:   'Carrer del Forn, 24',
-    zip:      '46470',
-    city:     'Catarroja',
-    province: 'Valencia',
-    full_es:  'Carrer del Forn, 24 · 46470 Catarroja, Valencia',
-    full_en:  'Carrer del Forn, 24 · 46470 Catarroja, Valencia',
+    zip:      '08620',
+    city:     'Sant Vicenç dels Horts',
+    province: 'Barcelona',
+    full_es:  'Carrer Santander 44-48 · 08620 Sant Vicenç dels Horts, Barcelona',
+    full_en:  'Carrer Santander 44-48 · 08620 Sant Vicenç dels Horts, Barcelona',
   },
 
   coords: {

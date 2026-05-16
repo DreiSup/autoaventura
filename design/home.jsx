@@ -140,7 +140,7 @@ function HeroSearch({ t, lang, vans }) {
         background: 'var(--paper)', borderRadius: 4, padding: 8, display: 'flex', alignItems: 'center', gap: 0,
         boxShadow: '0 12px 40px rgba(0,0,0,.15), 0 2px 8px rgba(0,0,0,.08)',
       }}>
-        <SearchField icon="pin" label={t.hero.pickup} value="Catarroja, Valencia"
+        <SearchField icon="pin" label={t.hero.pickup} value="Sant Vicenç dels Horts, Barcelona"
           onClick={() => setOpen(null)} />
         <Divider />
         <SearchField icon="cal" label={t.hero.dates} active={open === 'dates'}
@@ -454,7 +454,7 @@ function HomeMobile({ cardVariant = 'photo' }) {
         <Stripe kind="terra" label="hero photo · van + landscape" style={{ borderRadius: 4, height: 220, marginBottom: 22 }} />
         {/* search bar — mobile vertical */}
         <div style={{ background: 'var(--paper)', borderRadius: 4, padding: 6, boxShadow: '0 8px 24px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.06)' }}>
-          <MobileSearchRow icon="pin" label={t.hero.pickup} value="Catarroja, Valencia" />
+          <MobileSearchRow icon="pin" label={t.hero.pickup} value="Sant Vicenç dels Horts, Barcelona" />
           <div style={{ height: 1, background: 'var(--line)' }} />
           <MobileSearchRow icon="cal" label={t.hero.dates}
             value={dates.start ? `${fmtShort(dates.start, lang)} → ${dates.end ? fmtShort(dates.end, lang) : '…'}` : (lang === 'es' ? 'Seleccionar' : 'Pick dates')}

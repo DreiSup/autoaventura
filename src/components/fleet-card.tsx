@@ -26,7 +26,7 @@ export function FleetCard({ van, compact = false }: FleetCardProps) {
     >
       {/* image */}
       <div className={cn('relative', imgH)}>
-        <Stripe kind={kind} label={`${van.name.toLowerCase()} · hero shot`} className="absolute inset-0" />
+        <Stripe src={van.images?.[0]} kind={kind} label={`${van.name.toLowerCase()} · hero shot`} className="absolute inset-0" />
 
         {/* top-left tags */}
         <div className="absolute top-3.5 left-3.5 flex gap-1.5">

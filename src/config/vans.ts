@@ -38,7 +38,20 @@ export const VANS: Van[] = [
     motor: "Peugeot/Citroën 2.2 BlueHDi 140 CV (165 CV opc.)",
     deposit: 70,
     cleanWater: 100,
-    grayWater: 100
+    grayWater: 100,
+    images: [
+      '/Roller_Team_2024_Kronos_Advance_284_TL/2524a287a770881aff80fa653a0ac214_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/14256ed34bb03dc7447607b12d481462_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/74dd68a1eb61e830147732049b4f4dee_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/f030c10405cb5437430209ccefb225af_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/071473f0224c64849dcd9749d7692080_fit.png',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/193f36f95cff5724e3632c668567f015_fit.png',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/507b9c445b12d761259817a4e46d492b_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/74745cd25211a4fd84d2a16d14e111c3_fit.png',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/986f09c72fe9d199309530e281abf25a_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/fdcb2b64dcf03f93c5e3f76ec7a054a5_fit.jpg',
+      '/Roller_Team_2024_Kronos_Advance_284_TL/a395b385e54e92351c9d56d3e0c533c3_fit.jpg',
+    ],
   },
   {
     id: 'sierra',
@@ -77,7 +90,13 @@ export const VANS: Van[] = [
     motor: "Peugeot/Citroën 2.2 BlueHDi 140 CV (165 CV opc.)",
     deposit: 70,
     cleanWater: 100,
-    grayWater: 100
+    grayWater: 100,
+    images: [
+      '/Challeger_Sunset_Edition_2024/6862e634dacc07fd0f134df1e5275c07_fit.jpg',
+      '/Challeger_Sunset_Edition_2024/5f4837c39741d95a96e016a31e53dbd3_fit.jpg',
+      '/Challeger_Sunset_Edition_2024/099977ea5032538cc72e4c44d1d570ee_fit.jpg',
+      '/Challeger_Sunset_Edition_2024/e7fba8151c3a34f4b784ba7407be001e_fit.jpg',
+    ],
   },
   {
     id: 'valle',
@@ -116,7 +135,13 @@ export const VANS: Van[] = [
     motor: "Peugeot/Citroën 2.2 BlueHDi 140 CV (165 CV opc.)",
     deposit: 70,
     cleanWater: 100,
-    grayWater: 100
+    grayWater: 100,
+    images: [
+      '/Sun_Living_V60_SP_FAMILY/d354bea160fd031e5453815afca56bd3_fit.jpg',
+      '/Sun_Living_V60_SP_FAMILY/b3c0c6df55d9d75d9cda6397740d5745_fit.jpg',
+      '/Sun_Living_V60_SP_FAMILY/d71b306f217a83347beac4ecdf42ef50_fit.jpg',
+      '/Sun_Living_V60_SP_FAMILY/fbf09d8d43c64934023e4b39bd9dfe7a_fit.jpg',
+    ],
   },
   {
     id: 'mar',
@@ -155,6 +180,13 @@ export const VANS: Van[] = [
     motor: "Peugeot/Citroën 2.2 BlueHDi 140 CV (165 CV opc.)",
     deposit: 70,
     cleanWater: 100,
-    grayWater: 100
+    grayWater: 100,
+    images: [
+      '/BENIMAR_S_344_UP_2026/cb4e1a609ca1cea8e6a5df8372d0bc98_fit.png',
+      '/BENIMAR_S_344_UP_2026/53a9bc7d0f7d879a64131dd8da875b43_fit.png',
+      '/BENIMAR_S_344_UP_2026/33e1f3eb2cb63872935a2da1a9e1db3c_fit.png',
+      '/BENIMAR_S_344_UP_2026/516f9ce11e45fae5abfcd71ca5afc8c5_fit.png',
+      '/BENIMAR_S_344_UP_2026/eabe71954fce930e863d9fd6ded00b5e_fit.png',
+    ],
   },
 ]

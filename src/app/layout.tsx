@@ -28,10 +28,10 @@ const site = getSiteConfig()
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} · Autocaravanas desde Valencia`,
+    default: `${site.name} · Autocaravanas desde Barcelona`,
     template: `%s · ${site.name}`,
   },
-  description: 'Alquiler de autocaravanas en Valencia. Todo incluido, sin sorpresas. Recogida en Catarroja.',
+  description: 'Alquiler de autocaravanas en Barcelona. Todo incluido, sin sorpresas. Recogida en Sant Vicenç del Horts.',
   metadataBase: new URL('https://portquestudiar.com'),
   openGraph: {
     siteName: site.name,

@@ -7,6 +7,7 @@ import { FleetCard } from '@/components/fleet-card'
 import { FaqAccordion } from '@/components/faq-accordion'
 import { Footer } from '@/components/footer'
 import { getVans, getFaqs } from '@/lib/data'
+import Image from 'next/image'
 
 export default function HomePage() {
   const vans = getVans()
@@ -22,10 +23,10 @@ export default function HomePage() {
       <section className="px-5 pt-6 pb-10 md:px-16 md:pt-10">
         <div className="grid md:grid-cols-[1.05fr_1fr] md:gap-14 md:items-center md:mb-14">
           <div>
-            <Eyebrow className="mb-4 md:mb-5">Catarroja · Valencia</Eyebrow>
+            <Eyebrow className="mb-4 md:mb-5">Sant Vicenç dels Horts · Barcelona</Eyebrow>
             <h1 className="font-display font-semibold leading-[0.95] tracking-[-0.035em] text-[44px] mb-4 md:text-[86px] md:mb-6">
               Autocaravanas<br />
-              <em className="not-italic text-terra">desde Valencia</em><br />
+              <em className="not-italic text-terra">desde Barcelona</em><br />
               <span className="text-ink-2">para 4 personas</span>.
             </h1>
             <p className="text-lg text-ink-2 leading-relaxed mb-6 max-w-[480px] md:text-xl">
@@ -44,12 +45,12 @@ export default function HomePage() {
 
           {/* image grid — desktop only */}
           <div className="hidden md:grid grid-cols-[2fr_1fr] grid-rows-[1.4fr_1fr] gap-3 h-[480px] mt-6 md:mt-0">
-            <Stripe kind="terra" label="van + atardecer · costa brava" className="row-span-2 rounded" />
-            <Stripe kind="dark"  label="interior · costa"              className="rounded" />
-            <Stripe kind="sage"  label="detalle del mapa"              className="rounded" />
+            <Stripe src="/hero4.png" alt="Autocaravana al atardecer · Costa Brava" className="row-span-2 rounded" />
+            <Stripe src="/hero2.jpg" kind="dark"  label="interior · costa"              className="rounded" />
+            <Stripe src="/hero3.jpg" kind="sage"  label="detalle del mapa"              className="rounded" />
           </div>
           {/* image — mobile */}
-          <Stripe kind="terra" label="van · foto hero" className="md:hidden rounded h-[220px] mt-5 mb-6" />
+          <Stripe src="/hero4.png" alt="Autocaravana Autoaventura" className="md:hidden rounded h-[220px] mt-5 mb-6" />
         </div>
       </section>
 
@@ -57,7 +58,7 @@ export default function HomePage() {
       <section className="px-5 pb-10 md:px-16 md:pb-16">
         <div className="border-y border-line py-8 grid grid-cols-2 md:grid-cols-4">
           <TrustItem big="4,9" sub="★★★★★ · 312 reseñas" extra="verificadas en Google" />
-          <TrustItem big="7"   sub="años en Valencia"     extra="desde 2019" />
+          <TrustItem big="7"   sub="años en Barcelona"     extra="desde 2019" />
           <TrustItem big="2.140" sub="viajes completados" extra="y los que vendrán" />
           <TrustItem
             big={
@@ -105,7 +106,7 @@ export default function HomePage() {
           <div className="grid gap-8 md:grid-cols-3 md:gap-14">
             <HowStep n="01" title="Busca" body="Elige fechas y autocaravana. Sin pago aún, sin compromiso." />
             <HowStep n="02" title="Confirma por WhatsApp" body="Te respondemos en menos de 2 horas. Resolvemos dudas y bloqueamos las fechas." />
-            <HowStep n="03" title="Recoge en Catarroja" body="Te enseñamos la furgo en 30 minutos. Lleno de gasoil. Y a viajar." />
+            <HowStep n="03" title="Recoge en Sant Vicenç dels Horts" body="Te enseñamos la furgo en 30 minutos. Lleno de gasoil. Y a viajar." />
           </div>
         </div>
       </section>
